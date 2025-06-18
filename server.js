@@ -1,4 +1,4 @@
-// server.js (ES Module Syntax)
+// server.js 
 import express from "express";
 import session from "express-session";
 import crypto from "crypto";
@@ -6,12 +6,11 @@ import bodyParser from "body-parser";
 import path from "path";
 import fs from "fs";
 
-// For __dirname in ES modules:
 import { fileURLToPath } from "url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-// Use a simple JSON "database" for demonstration (replace with real DB in production)
+// Use a simple JSON "database"
 const USERS_DB = path.join(__dirname, "db_users.json");
 const URLS_DB = path.join(__dirname, "db_urls.json");
 
