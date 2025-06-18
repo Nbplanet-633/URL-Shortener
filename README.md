@@ -25,4 +25,4 @@ A simple URL shortener with authentication, built with Node.js, Express, and SQL
 
 ---
 
-Feel free to extend this app (add analytics, password reset, OAuth, API rate limits, etc.)
+
