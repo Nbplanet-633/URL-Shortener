@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Short URL App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="center-container">
+      <div class="center-box">
+        <h2>Short URL App</h2>
+
+        <form id="login-form">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            autocomplete="username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            autocomplete="current-password"
+            required
+          />
+          <button type="submit">Login</button>
+          <span id="login-msg"></span>
+          <div style="margin-top: 10px">
+            <a href="#" id="to-register">New user? Register</a>
+          </div>
+        </form>
+
+        <form id="register-form" class="hidden">
+          <input
+            type="text"
+            name="username"
+            placeholder="Username"
+            autocomplete="username"
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            autocomplete="new-password"
+            required
+          />
+          <button type="submit">Register</button>
+          <span id="register-msg"></span>
+          <div style="margin-top: 10px">
+            <a href="#" id="to-login">Already have an account? Login</a>
+          </div>
+        </form>
+
+        <form id="shorten-form" class="hidden">
+          <input
+            type="url"
+            name="originalUrl"
+            placeholder="Paste your long URL here"
+            required
+          />
+          <button type="submit">Shorten</button>
+          <span id="error-msg"></span>
+        </form>
+
+        <div id="result-box" style="display: none">
+          <input id="short-url-input" readonly />
+          <button id="copy-btn" type="button">Copy</button>
+        </div>
+
+        <div id="urls" class="hidden">
+          <h4>Your URLs</h4>
+          <ul id="url-list"></ul>
+        </div>
+
+        <button id="logout-btn" class="logout-btn hidden">
+          Logout (<span id="username-label"></span>)
+        </button>
+      </div>
+    </div>
+    <footer>Made with <span class="footer-heart">❤</span> by Your Name</footer>
+    <script src="loader.js"></script>
+  </body>
+</html>
