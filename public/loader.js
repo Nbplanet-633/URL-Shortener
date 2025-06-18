@@ -1,6 +1,6 @@
 // public/loader.js
 
-// Helper to show/hide loader overlay
+// to show/hide loader overlay
 function showLoader(show = true) {
   let overlay = document.getElementById("loader-overlay");
   if (!overlay) {
@@ -14,21 +14,21 @@ function showLoader(show = true) {
 }
 showLoader(false);
 
-// Helper to show error messages
+//to show error messages
 function showError(msg) {
   const el = document.getElementById("error-msg");
   el.textContent = msg || "";
   el.style.display = msg ? "block" : "none";
 }
 
-// Helper to show login/register messages
+//to show login/register messages
 function showMsg(id, msg) {
   const el = document.getElementById(id);
   el.textContent = msg || "";
   el.style.display = msg ? "block" : "none";
 }
 
-// Helper to get the user's URLs and render
+//get the user's URLs and render
 function loadUrls() {
   showLoader(true);
   fetch("/api/my-urls")
@@ -57,7 +57,7 @@ function renderUrls(urls) {
   });
 }
 
-// Helper to update UI on login state
+//to update UI on login state
 function setLoggedIn(username) {
   document.getElementById("shorten-form").classList.remove("hidden");
   document.getElementById("login-form").classList.add("hidden");
